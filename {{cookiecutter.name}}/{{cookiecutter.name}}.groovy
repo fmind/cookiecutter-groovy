@@ -6,6 +6,9 @@
 
 @Grab('org.apache.commons:commons-lang3:3.9')
 import org.apache.commons.lang3.StringUtils
+import java.util.logging.Logger
+
+Logger logger = Logger.getLogger(this.class.name)
 
 def cli = new CliBuilder(usage: "${this.class.name}.groovy [options]")
 cli.i(longOpt: 'input', args: 1, optionalArg: '-', 'use "-" for stdin')
